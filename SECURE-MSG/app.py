@@ -3,6 +3,15 @@ import os
 import shutil
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from flask_socketio import SocketIO, send, emit
+import eventlet
+import sys
+arg = False
+if len(sys.argv) > 1:
+    arg = True
+
+if arg:
+    eventlet.monkey_patch()
+
 
 app = Flask(__name__)
 app.secret_key = "secret_key"
@@ -283,4 +292,8 @@ def standar_bytes(mensaje):
     return padding_size, mensaje
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    if arg:
+        port = int(os.environ.get('PORT', 5000))
+        socketio.run(app, host='0.0.0.0', port=port)
+    else:
+        socketio.run(app, debug=True)
