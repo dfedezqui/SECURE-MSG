@@ -100,7 +100,7 @@ SECURE-MSG/
 ### Live Demo
 
 You can check out the app live here:  
-🔗 [https://gym-chat.onrender.com/](https://gym-chat.onrender.com/)
+🔗 [https://secure-msg.onrender.com](https://secure-msg.onrender.com)
 
 ### 1. Clone the repository
 ```bash
