@@ -71,31 +71,29 @@
 
 ## 📂 Directory Structure
 ```bash
-GYM-CHAT/
-├── backend/
-│ ├── app.py # Entry point for the backend server
-│ ├── core/
-│ │ ├── init.py
-│ │ └── analyzer.py # NLP analyzer using spaCy
-│ ├── data/
-│ │ ├── init.py
-│ │ └── loader.py # Loads structured resources (exercises, muscles)
-│ └── resources/
-│ ├── entities_spacy.json # Named entities definitions
-│ ├── exercises.json # List of exercises and related data
-│ └── muscles.json # Muscle group information
-├── frontend/
+SECURE-MSG/
+├──SECURE-MSG/
+│ ├── cifrados/
+│ ├── general users/
+│ │   ├── usuario01/
+│ │   │   └── firma_clave_publica.txt
+│ │   └── usuario02/
+│ │       └── firma_clave_publica.txt
+│ ├── local users/
+│ │   ├── usuario01/
+│ │   │   ├── clave_privada.txt
+│ │   │   └── usuario02/
+│ │   │       └── key.txt
+│ │   └── usuario02/
+│ │       ├── clave_privada.txt
+│ │       └── usuario01/
+│ │           └── key.txt
+│ ├── static/
 │ ├── templates/
-│ │ └── index.html # Main HTML template
-│ └── static/
-│ ├── css/
-│ │ └── style.css # Frontend styling
-│ └── js/
-│ └── script.js # Frontend interactivity
-├── .gitignore # Files and folders to ignore in Git
-├── LICENSE # Project license
-├── readme.md # Project documentation
-└── requirements.txt # Python dependencies
+│ └── app.py
+├── README.md
+└── requirements.txt
+
 ```
 ## ▶️ How to Run the Project
 
